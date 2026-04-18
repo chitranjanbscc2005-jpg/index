@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Right College Selection Guide | CareerLead.in</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: #fff;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 25px;
+      font-size: 1.05rem;
+      color: #e5e7eb;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #facc15;
+      color: #111827;
+    }
+
+    .btn-primary:hover {
+      background: #eab308;
+    }
+
+    .btn-secondary {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #1fb456;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #4b5563;
+    }
+
+    .problem-box,
+    .trust-box,
+    .cta-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      border-top: 5px solid #2563eb;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .card p {
+      color: #4b5563;
+      font-size: 0.96rem;
+    }
+
+    .card ul {
+      margin-top: 12px;
+      padding-left: 18px;
+      color: #374151;
+    }
+
+    .card ul li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      color: #dc2626;
+      font-weight: bold;
+    }
+
+    .success {
+      color: #059669;
+      font-weight: bold;
+    }
+
+    .trust-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .trust-list li {
+      margin-bottom: 12px;
+      color: #374151;
+    }
+
+    .quote-section {
+      background: #eef4ff;
+    }
+
+    .quotes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .quote {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      font-style: italic;
+      color: #374151;
+    }
+
+    .form-section {
+      background: #ffffff;
+    }
+
+    form {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #111827;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background: #1d4ed8;
+      color: #fff;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .final-line {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #111827;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 18px;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 58px;
+      height: 58px;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-float:hover {
+      background: #1fb456;
+    }
+
+    .small-note {
+      font-size: 0.92rem;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Choose the Right College, Not Just a Popular One</h1>
+      <p>
+        Many colleges highlight big company names like Microsoft, Google, Deloitte, or Accenture,
+        but very few students check the real placement data behind those claims.
+        Before you take admission, ask the right questions, verify the facts, and protect your future.
+      </p>
+      <div class="btn-group">
+        <a href="#form" class="btn btn-primary">Get Free Guidance</a>
+        <a href="https://wa.me/919798686973?text=Hi%20I%20need%20help%20for%20choosing%20the%20right%20college" class="btn btn-secondary" target="_blank">
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Why Students Make Wrong College Decisions</h2>
+      <p class="section-subtitle">
+        Most students do not fail because they are weak. They fail because they trust marketing more than evidence.
+        A good college decision should be based on facts, not only on advertisements or social media claims.
+      </p>
+
+      <div class="problem-box">
+        <p>
+          Many colleges promote placement by showing famous company logos. But a smart student should ask:
+          <span class="highlight">When did those companies actually visit? How many students were selected? For which roles? And what package was offered?</span>
+        </p>
+        <p class="small-note">
+          A strong college does not fear transparency. If the data is real, it can be shown clearly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f1f5f9;">
+    <div class="container">
+      <h2 class="section-title">Before Taking Admission, Ask These 4 Important Questions</h2>
+      <p class="section-subtitle">
+        These four questions can save you from fake placement promises, weak career growth, and years of regret.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>1. Can You Show Me Last Year’s Placement Report?</h3>
+          <p>
+            Do not rely only on posters, brochures, or website banners. Ask the college to show the
+            <strong>official placement report</strong> from the last academic year.
+          </p>
+          <ul>
+            <li>Check if the year is clearly mentioned</li>
+            <li>Check whether the company list is official and recent</li>
+            <li>Ask for PDF, report, or verified document</li>
+          </ul>
+          <p>
+            <span class="highlight">Warning:</span> If they avoid sharing proper data, that is a red flag.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>2. How Many Students Actually Got Placed?</h3>
+          <p>
+            The phrase “100% placement” sounds attractive, but it can be misleading if the college does not reveal actual numbers.
+          </p>
+          <ul>
+            <li>Ask total number of students in the batch</li>
+            <li>Ask how many students received offers</li>
+            <li>Calculate the real placement percentage</li>
+          </ul>
+          <p>
+            Example: If 300 students studied and only 60 got jobs, the real placement is <strong>20%</strong>, not 100%.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>3. What Job Roles Were Offered?</h3>
+          <p>
+            This is one of the most ignored questions. Many students think every placement means a high-quality career role.
+            That is not always true.
+          </p>
+          <ul>
+            <li>Ask whether the job was core, technical, finance, management, or support</li>
+            <li>Ask whether students were hired mainly in sales or telecalling roles</li>
+            <li>Check whether the role matches the course you are paying for</li>
+          </ul>
+          <p>
+            <span class="highlight">Reality:</span> In many cases, students are placed in low-growth sales roles, but colleges still market them as premium placements.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>4. What Is the Average Package, Not Just the Highest?</h3>
+          <p>
+            A college may show one student with a very high package, but that does not represent the whole batch.
+          </p>
+          <ul>
+            <li>Ask for average package</li>
+            <li>Ask for median package</li>
+            <li>Compare it with course fees and living expenses</li>
+          </ul>
+          <p>
+            Example: Highest package = 12 LPA, but average package = 2.5 LPA.
+            That gives you the real picture.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">What a Smart Student Should Do</h2>
+      <p class="section-subtitle">
+        A smart decision is not about choosing the most advertised college. It is about choosing the college that gives real value, real learning, and real career opportunity.
+      </p>
+
+      <div class="trust-box">
+        <ul class="trust-list">
+          <li>✔ Ask for evidence, not only promises</li>
+          <li>✔ Verify approval and accreditation details</li>
+          <li>✔ Compare fees with actual placement outcomes</li>
+          <li>✔ Check if the course matches your career goal</li>
+          <li>✔ Take guidance before making a final decision</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#eff6ff;">
+    <div class="container">
+      <h2 class="section-title">Why Students Trust CareerLead.in</h2>
+      <p class="section-subtitle">
+        We do not push random admissions. We help students make informed decisions with clarity, honesty, and practical guidance.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Verified Guidance</h3>
+          <p>
+            We help students check important factors like UGC, NAAC, AICTE, course quality, and placement clarity before admission.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Career-Focused Advice</h3>
+          <p>
+            We do not just suggest a college. We help you choose a course and college according to your goal, budget, and future scope.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Human Support</h3>
+          <p>
+            You get practical and honest support, not robotic answers or fake promises. We guide you like a real mentor should.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="container">
+      <h2 class="section-title">What Students Often Realize Too Late</h2>
+      <div class="quotes">
+        <div class="quote">
+          “I thought big company logos meant strong placement. Later I realized I never checked the real data.”
+        </div>
+        <div class="quote">
+          “I wish someone had told me to ask about actual job roles, not just package numbers.”
+        </div>
+        <div class="quote">
+          “Choosing a college is easy. Choosing the right one with evidence is what really matters.”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="form">
+    <div class="container">
+      <h2 class="section-title">Get Personal Guidance for College Selection</h2>
+      <p class="section-subtitle">
+        Fill in your details and get practical support to choose the right college and avoid fake placement claims.
+      </p>
+
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required />
+        </div>
+
+        <div class="form-group">
+          <label for="stream">12th Stream</label>
+          <select id="stream" name="stream" required>
+            <option value="">Select your stream</option>
+            <option>Science</option>
+            <option>Commerce</option>
+            <option>Arts</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="goal">Career Goal</label>
+          <input type="text" id="goal" name="goal" placeholder="Example: Job, Business, Government Exam, Higher Studies" required />
+        </div>
+
+        <div class="form-group">
+          <label for="budget">Budget Range</label>
+          <input type="text" id="budget" name="budget" placeholder="Enter your approximate budget" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Concern</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us what kind of college or course guidance you need"></textarea>
+        </div>
+
+        <button type="submit">Get My Guidance</button>
+        <p class="footer-note">
+          We believe in honest guidance, verified information, and better decisions.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-box" style="text-align:center;">
+        <h2 class="section-title" style="margin-bottom:10px;">Still Confused? Let’s Talk Directly</h2>
+        <p class="section-subtitle" style="margin-bottom:20px;">
+          If you want help in choosing the right college, course, or understanding placement claims,
+          connect directly on WhatsApp for guidance.
+        </p>
+        <a
+          href="https://wa.me/919798686973?text=Hi%20I%20need%20help%20for%20choosing%20the%20right%20college"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px; padding-bottom:70px;">
+    <div class="container">
+      <p class="final-line">
+        Admission is easy. Choosing the right college with evidence is what can change your future.
+      </p>
+    </div>
+  </section>
+
+  <a
+    href="https://wa.me/919798686973?text=Hi%20I%20need%20help%20for%20choosing%20the%20right%20college"
+    class="whatsapp-float"
+    target="_blank"
+    title="Chat on WhatsApp"
+  >
+    💬
+  </a>
+
+</body>
+</html>
